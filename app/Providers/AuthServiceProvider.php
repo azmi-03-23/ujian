@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+
+use App\Models\User;
+use App\Models\Customer;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
@@ -14,6 +18,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+        //automatic
     ];
 
     /**
@@ -25,6 +30,10 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('customer-update-membership', function(User $user, Customer $customer){
+            return $user->role == 'SuperAdmin'
+                ? Response::allow()
+                : Response::deny('You must be a Super Admin to assign/revoke membership.');
+        });
     }
 }
