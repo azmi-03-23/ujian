@@ -6,6 +6,11 @@
     </x-slot>
 
     <div class="py-12">
+        <div class="bg-gray-800 dark:bg-white overflow-hidden m-4 shadow-sm sm:rounded-lg w-1/12">
+            <div class="text-center p-6 text-gray-100 dark:text-gray-900">
+                <a href="{{ route('customers.create') }}">Create</a>
+            </div>
+        </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden mx-12.5 shadow-sm sm:rounded-lg">
                 <div  class="text-center p-6 text-gray-900 dark:text-gray-100">

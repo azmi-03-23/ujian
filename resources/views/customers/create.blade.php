@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-12">
-        @include('customers.form')
+        @include('customers.create-form')
     </div>
 </x-app-layout>
 

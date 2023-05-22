@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="bg-gray-800 dark:bg-white-100 overflow-hidden mr-4 shadow-sm sm:rounded-lg w-1/12">
+        <div class="bg-gray-800 dark:bg-white overflow-hidden m-4 shadow-sm sm:rounded-lg w-1/12">
             <div class="text-center p-6 text-gray-100 dark:text-gray-900">
                 <a href="{{ route('transaksis.create') }}">Create</a>
             </div>

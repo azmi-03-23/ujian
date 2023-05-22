@@ -1,16 +1,14 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 text-gray-900 dark:text-gray-100">
-            <form method="POST" action="{{ route('customers.update', $customer) }}">
+            <form method="POST" action="{{ route('customers.store') }}">
                 @csrf
-                @method('PUT')
                 <!-- Nama -->
                 <div class="mt-4">
                     <x-input-label for="nama" :value="__('Nama')"/>
                     <x-text-input id="nama" class="block mt-1 w-full"
                                     type="text"
                                     name="nama"
-                                    value="{{ $customer->nama }}"
                                     required/>
                 </div>
 
@@ -20,14 +18,13 @@
                     <x-text-input id="alamat" class="block mt-1 w-full"
                                     type="text"
                                     name="alamat"
-                                    value="{{ $customer->alamat }}"
                                     required/>
                 </div>
 
                 <!-- Tipe Member -->
                 <div class="mt-4">
                     <label for="tipe_member">Tipe Membership:</label>
-                    <select @cannot('customer-update-membership') disabled @endcannot name="tipe_member" id="tipe_member">
+                    <select id="tipe_member">
                         @foreach($memberships as $membership)
                           <option value="{{ $membership->nama }}">$membership->nama</option>
                         @endforeach

@@ -3,9 +3,8 @@
     "",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\layouts",
-    "\\resources\\views\\valas"
+    "\\resources\\views\\layouts"
   ],
-  "SelectedNode": "\\resources\\views\\layouts\\app.blade.php",
+  "SelectedNode": "\\resources\\views\\layouts\\navigation.blade.php",
   "PreviewInSolutionExplorer": false
 }
