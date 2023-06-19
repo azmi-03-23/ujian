@@ -3,8 +3,8 @@
     "",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\layouts"
+    "\\resources\\views\\laporan"
   ],
-  "SelectedNode": "\\resources\\views\\layouts\\navigation.blade.php",
+  "SelectedNode": "\\resources\\views\\laporan\\valas.blade.php",
   "PreviewInSolutionExplorer": false
 }

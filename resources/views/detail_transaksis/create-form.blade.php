@@ -17,16 +17,14 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 text-gray-900 dark:text-gray-100">
-            <form method="POST" action="{{ route('detail_transaksis.update', $detail_transaksi) }}">
+            <form method="POST" action="{{ route('detail_transaksis.store') }}">
                 @csrf
-                @method('PUT')
                 <div class="mt-4">
                     <x-input-label for="transaksi_id" :value="__('ID Transaksi')"/>
                     <x-text-input id="transaksi_id" class="block mt-1 w-full"
                                     type="text"
                                     disabled
                                     name="transaksi_id"
-                                    value="{{ $transaksi->id }}"
                                     required/>
                 </div>
                 <div class="mt-4">
@@ -43,8 +41,14 @@
                                     type="number"
                                     name="qty"
                                     min="1"
-                                    value="{{ $detail_transaksi->qty }}"
                                     required/>
+                </div>
+                <div class="mt-4">
+                    <x-input-label for="another" :value="__('Buat Yang Lain?')">
+                    <select id="another" name="another">
+                        <option value="yes">YES</option>
+                        <option value="no">NO</option>
+                    </select>
                 </div>
                 <x-primary-button class="ml-3">
                     {{ $pilihan }}

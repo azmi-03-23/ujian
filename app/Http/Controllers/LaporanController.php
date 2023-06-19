@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
-    public function valas($nama_valas){
-        $valas = Valas::where('nama_valas', $nama_valas)->get();
-        return view('laporan.valas', ['valas' => $valas]);
-    }
-
     public function valas(){
         $valas_ = Valas::all();
         json_encode($valas_);

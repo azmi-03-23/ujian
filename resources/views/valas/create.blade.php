@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-12">
-         @include('valas.form')
+         @include('valas.create-form')
     </div>
 </x-app-layout>
 

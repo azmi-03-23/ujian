@@ -1,16 +1,14 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 text-gray-900 dark:text-gray-100">
-            <form method="POST" action="{{ route('memberships.update', $membership) }}">
-            @csrf
-            @method('PUT')
+            <form method="POST" action="{{ route('memberships.store') }}">
+                @csrf
                 <!-- Nama -->
                 <div class="mt-4">
                     <x-input-label for="nama" :value="__('Nama')"/>
                     <x-text-input id="nama" class="block mt-1 w-full"
                                     type="text"
                                     name="nama"
-                                    value="{{ $membership->nama }}"
                                     required/>
                 </div>
 
@@ -22,7 +20,6 @@
                                     min="1"
                                     max="99"
                                     name="diskon"
-                                    value="{{ $membership->diskon }}"
                                     required/>
                 </div>
 
@@ -33,8 +30,7 @@
                                     type="number"
                                     min="1"
                                     max="20"
-                                    name="minimum_profit"
-                                    value="{{ $membership->minimum_profit }}"/>
+                                    name="minimum_profit"/>
                 </div>
                 <x-primary-button class="ml-3">
                     {{ $pilihan }}
